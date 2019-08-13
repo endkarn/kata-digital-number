@@ -43,3 +43,18 @@ func TestGetSetOfDigitalNumber_By_1_2_Should_1_2(t *testing.T) {
 
 	assert.Equal(t, expected, actual)
 }
+
+func TestRenderSetOfDigitalNumberToString_By_1_Should_Be_1(t *testing.T) {
+	expected := "|\t\n|\t\n|\t\n|\t\n"
+
+	actual := RenderSetOfDigitalNumberToString([][]string{
+		[]string{
+			"|",
+			"|",
+			"|",
+			"|",
+		},
+	})
+
+	assert.Equal(t, expected, actual)
+}
