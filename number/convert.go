@@ -1,6 +1,6 @@
 package number
 
-func ConvertNumberToDigitalNumberString(num int) string {
+func ConvertIntegerToDigitalNumber(num int) string {
 	if num == 1 {
 		return "|\n|"
 	}
