@@ -13,7 +13,7 @@ func RenderLcdNumber(number int) string {
 	return RenderSetOfDigitalNumberToString(digitalLcdSet)
 }
 
-func RenderSetOfDigitalNumberToString(setNumber [9][4]string) string {
+func RenderSetOfDigitalNumberToString(setNumber [][4]string) string {
 	var rendered string
 		//rows loop
 		for row := 0; row < maxDigitalNumberRows; row++ {
@@ -25,11 +25,11 @@ func RenderSetOfDigitalNumberToString(setNumber [9][4]string) string {
 	return rendered
 }
 
-func GetSetOfDigitalNumber(numbers []int) [9][4]string {
-	var digiNumberList [9][4]string
-	for index , number := range numbers {
+func GetSetOfDigitalNumber(numbers []int) [][4]string {
+	var digiNumberList [][4]string
+	for _ , number := range numbers {
 		digiNumber := ConvertIntegerIntoArrayTextDigiFormat(number)
-		digiNumberList[index] = digiNumber
+		digiNumberList = append(digiNumberList,digiNumber)
 	}
 	return digiNumberList
 }
