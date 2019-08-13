@@ -7,6 +7,14 @@ import (
 
 const maxDigitalNumberRows  = 4
 
+func RenderSetOfDigitalNumberToString(setNumber [][]string) string {
+	var rendered string
+
+	rendered += "|\t\n|\t\n|\t\n|\t\n"
+
+	return rendered
+}
+
 func GetSetOfDigitalNumber(numbers []int) [][]string {
 	var digiNumberList [][]string
 	for _, number := range numbers{
