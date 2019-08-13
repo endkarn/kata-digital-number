@@ -23,3 +23,23 @@ func TestSplitNumberToArray_By_12_Shoud_Be_1_2(t *testing.T) {
 
 	assert.Equal(t, expected, actual)
 }
+
+func TestGetSetOfDigitalNumber_By_1_2_Should_1_2(t *testing.T) {
+	expected := [][]string{
+		[]string{
+			"|",
+			"|",
+			"|",
+			"|",
+	},[]string{
+			"---",
+			" _|",
+			"|  ",
+			"---",
+		},
+	}
+
+	actual := GetSetOfDigitalNumber([]int{1,2})
+
+	assert.Equal(t, expected, actual)
+}

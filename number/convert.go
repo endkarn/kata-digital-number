@@ -5,6 +5,17 @@ import (
 	"strings"
 )
 
+const maxDigitalNumberRows  = 4
+
+func GetSetOfDigitalNumber(numbers []int) [][]string {
+	var digiNumberList [][]string
+	for _, number := range numbers{
+		digiNumber := ConvertIntegerIntoArrayTextDigiFormat(number)
+		digiNumberList = append(digiNumberList,digiNumber)
+	}
+	return digiNumberList
+}
+
 func SplitNumberToArray(num int) []int {
 	var intArray []int
 	stringNum := strconv.Itoa(num)
