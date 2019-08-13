@@ -5,24 +5,42 @@ import (
 	"strings"
 )
 
-func ConvertIntegerToDigitalNumber(num int) string {
-	var result string
-	for _ , aNumber := range SplitNumberToStringArray(num){
-		result += "\n"
-		if aNumber == "1" {
-			result+= "|\n|"
-		}
-		if aNumber == "2" {
-			result+= " _\n  |\n -\n|_"
-		}
-		if aNumber == "3"{
-			result+= " _\n  |\n -|\n _"
-		}
+func SplitNumberToArray(num int) []int {
+	var intArray []int
+	stringNum := strconv.Itoa(num)
+	stringNumArray := strings.Split(stringNum, "")
+	for _ , aStringNum := range stringNumArray{
+		aIntNum,_ := strconv.Atoi(aStringNum)
+		intArray = append(intArray, aIntNum)
 	}
-	return result
+	return intArray
 }
 
-func SplitNumberToStringArray(num int) []string {
-	stringNum := strconv.Itoa(num)
-	return strings.Split(stringNum, "")
+
+func ConvertIntegerIntoArrayTextDigiFormat(num int) []string{
+	if num == 1 {
+		return []string{
+			"|",
+			"|",
+			"|",
+			"|",
+		}
+	}
+	if num == 2 {
+		return []string{
+			"---",
+			" _|",
+			"|  ",
+			"---",
+		}
+	}
+	if num == 3 {
+		return []string{
+			"---",
+			"  |",
+			"--|",
+			"---",
+		}
+	}
+	return []string{}
 }
