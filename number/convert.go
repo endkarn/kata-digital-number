@@ -7,11 +7,17 @@ import (
 
 func ConvertIntegerToDigitalNumber(num int) string {
 	var result string
-	if num == 1 {
-		return "|\n|"
-	}
-	if num == 2 {
-		return " _\n  |\n -\n|_"
+	for _ , aNumber := range SplitNumberToStringArray(num){
+		result += "\n"
+		if aNumber == "1" {
+			result+= "|\n|"
+		}
+		if aNumber == "2" {
+			result+= " _\n  |\n -\n|_"
+		}
+		if aNumber == "3"{
+			result+= " _\n  |\n -|\n _"
+		}
 	}
 	return result
 }
