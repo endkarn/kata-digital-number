@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	render := number.RenderLcdNumber(213)
+	render := number.RenderLcdNumber(1234567890)
 	fmt.Println(render)
 }
